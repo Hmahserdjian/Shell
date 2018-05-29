@@ -1,19 +1,59 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+import Jumbotron from "./components/jumbotron";
+import Input from "./components/Input";
+import Button from "./components/Buttons";
+import { Container, Row, Col, Footer } from "./components/Grid";
 import "./App.css";
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+    <div>
+      <Jumbotron/>
+        <Input/>
+          <Row>
+            <Col size="6">
+              <form>
+                <Container>
+                  <Row>
+                    <Col size="lg-6">
+                        <h2>
+                            Search for Articles
+                        </h2>
+                    </Col>  
+                  </Row>
+                </Container>
+              
+                 <Container>
+                   <Row>
+                    <Container>
+                    <Col size="6">
+                      <Button
+                        onClick={this.handleFormSubmit}
+                        type="primary"
+                        className="input-lg"
+                      >
+                        Search
+                      </Button>
+                    </Col>
+                    </Container>
+                  </Row>
+               </Container>
+              
+              
+            </form>
+            </Col>
+            </Row>
+
+            <Container>
+            
+              <Footer>
+                    <p> NTY Scrapper </p>
+              </Footer>
+              
+            </Container>
+    </div>
     );
   }
 }
