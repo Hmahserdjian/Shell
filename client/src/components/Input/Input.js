@@ -1,27 +1,32 @@
 import React from "react";
+// import { Col } from "../Grid";
 
 
-const Input = () => (
+const Input = props => (
     
- < div className = "Row" >
-   <div className ="col-md-4">
-         <h4>Articles</h4>
-    <p>
-        <input type="text"  placeholder="Articles"></input>
-    </p>
-           <p> Start Date: </p>
-    <p>
-        <input type="date"  min="2000-01-02"></input>
-   </p>
+ <div >               
     
-               <p> End Date: </p>
-    <p>
-        <input type="date"  min="2000-01-02"></input>
-   </p>
+        
+            
+                Articles:
+            <input type="text"  placeholder="Articles"></input>
+              Start Date: 
+                <input type="date"  min="2000-01-02"></input>
+            End Date: 
+                <input type="date"  min="2000-01-02"></input>
+           
+            
+`  
+        
+   
+
+   
+
 </div>
-</div>
+
 
     
 );
 
 export default Input;
+

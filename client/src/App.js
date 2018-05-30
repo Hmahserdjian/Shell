@@ -11,48 +11,32 @@ class App extends Component {
     return (
     <div>
       <Jumbotron/>
-        <Input/>
+        
+          <Container>
+            <Input/>
           <Row>
-            <Col size="6">
+            <Col size="lg6">
               <form>
-                <Container>
-                  <Row>
-                    <Col size="lg-6">
                         <h2>
                             Search for Articles
                         </h2>
-                    </Col>  
-                  </Row>
-                </Container>
-              
-                 <Container>
-                   <Row>
-                    <Container>
-                    <Col size="6">
-                      <Button
+                           <Button
                         onClick={this.handleFormSubmit}
                         type="primary"
-                        className="input-lg"
+                        className="input-md"
                       >
                         Search
                       </Button>
+                      </form>
                     </Col>
-                    </Container>
                   </Row>
-               </Container>
-              
-              
-            </form>
-            </Col>
-            </Row>
-
-            <Container>
-            
+            </Container>
+            <Container>      
               <Footer>
                     <p> NTY Scrapper </p>
               </Footer>
-              
             </Container>
+            
     </div>
     );
   }
